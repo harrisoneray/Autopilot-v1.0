@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61,<76", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "usv-autopilot"
+version = "0.1.0"
+description = "Raspberry Pi USV software foundations"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+gnss = ["pyserial==3.5", "pynmea2==1.19.0"]
+lcd = ["RPLCD==1.4.0", "smbus2==0.5.0"]
+
+[project.scripts]
+usv = "usv.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

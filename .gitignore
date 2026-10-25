@@ -12,3 +12,15 @@ data/
 *.csv
 *.bag
 *.db
+
+.venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.env.*
+!.env.example
